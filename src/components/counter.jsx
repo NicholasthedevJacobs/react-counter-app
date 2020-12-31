@@ -5,12 +5,8 @@ class Counter extends Component {
         count: 0, 
     };
 
-    // constructor(){
-    //     super();
-    //     this.handleIncrement = this.handleIncrement.bind(this);
-    // }
 
-    handleIncrement = () =>{
+    handleIncrement = () => {
         this.setState({ count: this.state.count + 1 });
     };
  
@@ -20,7 +16,7 @@ class Counter extends Component {
         return <ul>
             { this.state.tags.map(tag => <li key={tag}>{ tag }</li>) }
         </ul>;
-    }
+    };
 
     render(){
         return (
@@ -35,19 +31,19 @@ class Counter extends Component {
             
         </div>
         );
-    }
+    };
 
     getBadgeClasses() {
         // here I added "badge- which will append warning or primary"
         let classes = "badge m-2 badge-";
         classes += (this.state.count === 0) ? "warning" : "primary";
         return classes;
-    }
+    };
 
     formatCount() {
         const { count } = this.state;
         return count === 0 ? "Zero" : count;
-    }
+    };
 }
  
 export default Counter;
