@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import NavBar from '.components/navbar';
 import './App.css';
 
 function App() {
